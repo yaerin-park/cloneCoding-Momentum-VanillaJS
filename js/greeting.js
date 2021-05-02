@@ -24,6 +24,7 @@ function handleSubmit(event) {
 function askForName() {
   askSection.classList.add(SHOWING_CN);
   form.addEventListener("submit", handleSubmit);
+  input.focus();
 }
 
 function paintGreeting(text) {
@@ -42,6 +43,9 @@ function paintGreeting(text) {
   } else {
     greeting.innerText = `Good night, ${text}`;
   }
+
+  const toDoBtn = document.querySelector(".js-toDo");
+  toDoBtn.style.display = "block";
 }
 
 function loadName() {

@@ -124,6 +124,10 @@ function loadToDos() {
 }
 
 function init() {
+  const user = localStorage.getItem("currentUser");
+  if (user !== null) {
+    toDoBtn.style.display = "block";
+  }
   loadToDos();
   toDoBtn.addEventListener("click", handleClickBtn);
   toDoForm.addEventListener("submit", handleSubmit);
