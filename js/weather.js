@@ -34,7 +34,7 @@ function handleGeoSuccess(position) {
         longitude       //= longitude: longitude 와 같은 의미
     };
     saveCoords(coordsObj);
-    getWeather(latitude, longitude);s
+    getWeather(latitude, longitude);
 }
 
 function handleGeoError() {
