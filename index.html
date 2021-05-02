@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mango's Momontom</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/mango.png">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/d5f6e07aa9.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div class="left">
+        <form class="js-search" type="GET">
+          <span class="underline">
+            <input class="search-input" type="text" search-url="https://www.google.com/search?q=">
+            <i class="fas fa-search"></i>
+          </span>
+        </form>
+      </div>
+      <div class="right">
+        <div class="js-weather">
+          <img src="" alt="">
+          <span class="js-temperature"></span>
+        </div>
+        <span class="js-place"></span>
+      </div>
+    </header>
+    <main>
+      <!-- name 입력 전 -->
+      <section class="before-input-name">
+        <span class="js-ask">Hello, What's your name?</span>
+        <form class="js-form">
+          <input type="text">
+        </form>
+      </section>
+      <!-- name 입력 후 -->
+      <section class="after-input-name">
+        <span class="js-clock">00:00</span>
+        <span class="js-greetings"></span>
+      </section>
+    </main>
+    <footer>
+      <span class="js-bgDesc"></span>
+      <span class="js-toDo">To-do</span>
+      <div class="js-popup">
+        <div class="top">
+          <span>TO-DO</span>
+          <input type="radio" id="radio-all" name="filter" checked><label for="radio-all">All</label>
+          <input type="radio" id="radio-active" name="filter"><label for="radio-active">Active</label>
+          <input type="radio" id="radio-done" name="filter"><label for="radio-done">Done</label>
+        </div>
+        <ul class="js-toDoList"></ul>
+        <form class="js-toDoForm">
+          <input type="text" placeholder="Write a to do" />
+        </form>
+      </div>
+    </footer>
+    <script src="js/clock.js"></script>
+    <script src="js/greeting.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/bg.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/search.js"></script>
+  </body>
+</html>

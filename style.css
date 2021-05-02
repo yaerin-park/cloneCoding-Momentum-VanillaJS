@@ -1,0 +1,266 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  display:flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+span {
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+/* header contents**********************************/
+.underline {
+  border-bottom: 2px solid white;
+  padding: 2px;
+}
+.search-input {
+  background: none;
+  border: none;
+  line-height: 20px;
+  outline: none;
+  color: white;
+}
+.fa-search {
+  color: white;
+}
+.fa-search:hover {
+  cursor: pointer;
+  color: lightgray;
+}
+.header .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.js-weather {
+  display: flex;
+}
+.js-weather img {
+  object-fit: contain;
+  margin-right: -8px;
+}
+.js-temperature {
+  font-size: 35px;
+  top: 0px;
+}
+.js-place {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -12px;
+}
+/***************************************************/
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* main contents************************************/
+.before-input-name {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.js-ask {
+  display: block;
+  font-size: 65px;
+  font-weight: bold;
+}
+.js-form {
+  display: block;
+  margin-top: 10px;
+}
+.js-form input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid white;
+  outline: none;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+.after-input-name {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.js-clock {
+  font-size: 150px;
+  font-weight: bold;
+}
+.js-greetings {
+  font-size: 65px;
+  font-weight: bold;
+}
+hr{
+  width: 600px;
+  margin: 0;
+  border: none;
+  border: 1px solid white;
+}
+
+/***************************************************/
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  padding-right: 20px;
+}
+/* footer contents**********************************/
+.js-bgDesc {
+  opacity: 80%;
+}
+.js-toDo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.js-toDo:hover {
+  color: gold;
+}
+.js-popup {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  bottom: 47px;
+  right: 20px;
+  border: 3px solid white;
+  border-radius: 5px;
+  z-index: 9;
+  background-color: white;
+  padding: 10px;
+}
+.js-popup:after {
+  top: 100%;
+  right: 5%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: white;
+  border-width: 12px;
+  margin-left: -12px;
+}
+.js-popup .top span {
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.js-popup .top input {
+  display: none;
+}
+.js-popup .top input:checked + label {
+    border-bottom: 2px solid gray;
+    font-weight: bold;
+}
+.js-popup .top label {
+  font-size: 15px;
+  color: gray;
+  cursor: pointer;
+}
+.js-popup .top label:hover {
+  border-bottom: 1px solid black;
+}
+.js-toDoForm {
+  display: flex;
+}
+.js-toDoForm input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid white;
+  outline: none;
+}
+.js-toDoList {
+  list-style: none;
+  padding: 0;
+}
+.js-toDoList li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+}
+.js-toDoList li span{
+  color: black;
+  flex-grow: 1;
+  padding-left: 3px;
+}
+.js-toDoList li input {
+  width: 15px;
+  height: 15px;
+}
+.js-toDoList li input:checked + span {
+  text-decoration-line: line-through;
+  color: gray;
+}
+.js-toDoList li button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  opacity: 50%;
+}
+.js-toDoList li button:hover{
+  opacity: 100%;
+}
+
+/***************************************************/
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.showing {
+  display: flex;
+  animation: fadeIn 0.5s linear;
+}
+
+.bgImg:before {
+  content:"";
+  position:absolute;
+  width:30%;
+  height:0;
+  padding-top:30%;
+  top:50%;
+  left:50%;
+  opacity:0;
+  transform:translate(-50%,-50%);
+  transition:transform 0.5s, opacity 0.5s;
+  border:1em solid;
+  border-color:#0484 #0488;
+  border-radius:50%;
+}
+.bgImg {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
